@@ -21,6 +21,9 @@
     padding: 10px 20px;
     
   }
+  .navbar a {
+    color: #ffffff;
+  }
   .navbar a:visited {
     color: #ffffff;
   }
