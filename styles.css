@@ -1,0 +1,109 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  h1 {
+    color: #333333;
+    text-align: left;
+  }
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 20px;
+    
+  }
+  .navbar a:visited {
+    color: #ffffff;
+  }
+  .navbar-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .navbar-tabs {
+    display: flex;
+  }
+  .navbar-tab {
+    margin-left: 20px;
+  }
+  .navbar-tab:first-child {
+    margin-left: 0;
+  }
+  .navbar-tab:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .reference-wrapper {
+    margin-top: 30px;
+  }
+  .reference-list {
+    flex-basis: calc(33.33% - 20px);
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .reference-item {
+    margin: 2rem 0;
+  }
+  .reference-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  .reference-description {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 5px;
+  }
+  .reference-url {
+    font-size: 14px;
+    color: #666666;
+  }
+
+
+/* CSS styles for mobile */
+@media (max-width: 767px) {
+  body {
+    padding: 10px;
+  }
+  h1 {
+    color: #333333;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .reference-wrapper {
+    margin-top: 20px;
+  }
+  .reference-list {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .reference-item {
+    margin: 1rem 0;
+  }
+  .reference-title {
+    font-size: 16pxว
+    margin-bottom: 8px;
+  }
+  .reference-description {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .reference-url {
+    font-size: 12px;
+  }
+}
