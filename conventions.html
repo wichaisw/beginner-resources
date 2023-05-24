@@ -20,6 +20,30 @@
   <div class="reference-wrapper">
     <div class="reference-list">
       <div class="reference-item">
+        ผมเห็นถามตอนท้ายว่าอยากกลับมาดูสไลด์ว่าต้องเรียนรู้อะไรเพิ่ม เลยขอลิสต์ keyword ประเด็นประมาณนี้แล้วกัน ใดๆ ใจความของการดีไซน์ต่างๆ คือ loose coupling (เบื้องต้นคือทำให้โค้ดสัมพันธ์กับแค่หลวมๆ ไม่ขึ้นต่อกัน แก้ตัวนึงอีกตัวไม่ต้องเปลี่ยนตาม) ถ้านึกออกอาจจะมาเพิ่มอีก
+        <p>
+          <span><b>Clean Code</b>: แนวทางการเขียนโค้ดให้อ่านง่าย maintain ง่าย โดย Robert C. Martin (ลุงบ๊อบ)</span></br>
+          <span><b>Clean Architecture</b>: แนวทางการออกแบบ architecture โดยลุงบ๊อบเหมือนกัน แพร่หลายและนิยมอยู่ (ระวัง architecture !== folder structure) </span></br>
+          <span><b>Domain-Driven Design</b>: การออกแบบโค้ดให้สะท้อนโลจิกของ business</span></br>
+          <span><b>Microservices</b>: แนวคิดการแตก service ระบบเราออกเป็นหลายๆ ตัว ทำงานแยกกันได้ โดย ideal คือแก้ตัวนึงไม่ต้องมีความรู้อีกตัวนึง อาจจะแบ่งทีมไปดูแลแยกเฉพาะส่วนได้เลย แล้วพอระบบใหญ่มากเราจะเริ่มต้องคิดว่าจะจัดการยังไง เช่น ระบบมีผู้ใช้ 100,000 คน มี 1,000 คน export ข้อมูลหมื่นแถวใน database เป็น excel พร้อมกันซึ่งเป็นการทำงานหนักมา ทำยังไงไม่ให้อีก 99,000 คนช้าไปด้วย microservices ก็อาจบอกว่า เอาข้องขึ้น service ที่เป็น queue แล้วมี worker มา consume ทำเสร็จค่อยกลับมาบอก server หลักอีกที ไม่ต้องทำที่ server หลักแล้วไปช้าคนอื่น</span></br>
+          <span><b>Design Patterns</b>: ในการเขียน OOP มันง่ายมากที่โค้ดจะพันกันมั่วไปหมด design patterns คือรูปแบบที่คิดมาแล้วประมาณนึงว่าไปท่าแบบนี้ตอบโจทย์</span></br>
+          <span><b>Functional Programming</b>: การเขียนทุกอย่างเป็น pure function และเป็น declarative คล้ายสมการคณิตศาสตร์ ถึงไม่ได้ใช้โดยตรงก็เสริมวิธีการคิดได้ดี</span></br>
+          <span><b>Data Structures & Algorithms</b>: เพิ่ม performance ของโค้ดให้มีประสิทธิภาพขึ้น ถ้าทำไม่ได้ไม่เป็นไร ลองอ่านเฉลยแล้วทำความเข้าใจเฉลยไปก่อนก็ได้ เราก็จะเห็นว่ามันมีวิธีเขียนที่มีประสิทธิภาพกว่าผ่านวิธีคิดยังไงแล้ว</span></br>
+          <span><b>Server-Side Rendering</b>: React เป็น Client-Side Rendering ลองศึกษาว่าต่างยังไง เหมาะกับอะไร ลองเรียน  Next ที่เป็น framework ที่เรียกใช้ React อีกทีก็ได้ เอกสารดีอ่านง่าย ได้ใช้ความรู้เดิมด้วย</span>
+          <span>frontend: หน้าบ้านจะมีคอนเซปต์อื่นๆ อีก เช่น lazy load, tree shaking, progressive web app</span></br>
+          <span>git: คำสั่งที่ควรรู้จักให้ชินนอกจากพื้นฐาน git stash, git stash apply, git reset --soft, git reset --hard, git restore, git revert, git rebase -i</br>
+        </p>
+      </div>
+
+      <p>
+        <span>Q&A เพิ่มเติม ผมเพิ่งนึกได้ว่าลืมพูดอะไร</span>
+        <ul>
+          <li>เริ่มมั่นใจตอนไหน?: ถ้าทำโปรเจกต์ได้ก็จะเริ่มมั่นใจนิดนึงแล้วแหละ โปรเจกต์จบที่ทำตอนนั้นเป็นคล้ายๆ Grab แต่เป็นเว็บ มีต่อ google map api, จ่ายตังค์ผ่าน payment gateway,ใช้ socket.io ทำ realtime notification ก็คิดว่าเริ่มมั่นใจประมาณนึงนะ แต่กลับไปดูตอนนี้ก็ส่ายหัวอยู่ดี 555</li>
+          <li>CRUD นึกไม่ออกจะทำอะไร: ง่ายๆ สุด คือทำ To-Do List ของตัวเอง ลองคิดด้วยว่าการลบ ลบจริงไหม จะทำให้ข้อมูลหายไป หรือจะย้ายไปถังลบเฉยๆ หลายๆ อย่างจริงๆ มันก็ต่อยอดจาก to-do list เช่นระบบตะกร้าสินค้ามันก็คือ to-do list ที่มีราคา ลองทำโดยต่อยอดจาก to-do list ก็ได้สำหรับการฝึก ถ้าทำได้ก็ต่อยอดต่อไม่ยาก</li>
+        </ul>
+      </p>
+      <hr>
+      <div class="reference-item">
         <div class="reference-title">Airbnb JavaScript Style Guide</div>
         <div class="reference-description">แนวทางการเขียน JS ของ Airbnb</div>
         <div class="reference-url">
